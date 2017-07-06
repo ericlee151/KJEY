@@ -35,8 +35,9 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@mipmap/ic_launcher_round"
-                android:layout_gravity="center" />
+                  android:layout_gravity="center"
+                android:id="@+id/item_image"
+                android:src="@drawable/defaultitem"/>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -53,7 +54,8 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Borrow Item"/>
+                        android:hint="Borrow Item"
+                        android:id="@+id/txt_item_name"/>
 
                 </LinearLayout>
 
@@ -91,13 +93,18 @@
                             android:layout_width="80dp"
                             android:layout_height="50dp"
                             android:src="@drawable/ic_account_circle_black_24dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:tint="@color/colorAccent"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:id="@+id/txt_borrower"
+                            android:focusable="false"
+                            android:paddingLeft="10dp"
+                            android:hint="Name"/>
 
                     </LinearLayout>
 
@@ -111,13 +118,18 @@
                             android:layout_width="80dp"
                             android:layout_height="50dp"
                             android:src="@drawable/ic_class_black_24dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:tint="@color/colorAccent" />
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:id="@+id/txt_category"
+                            android:focusable="false"
+                            android:paddingLeft="10dp"
+                            android:hint="Category"/>
 
                     </LinearLayout>
 
@@ -131,13 +143,18 @@
                             android:layout_width="80dp"
                             android:layout_height="50dp"
                             android:src="@drawable/ic_add_alert_black_24dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:tint="@color/colorAccent"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:hint="dd/mm/yyyy"
+                            android:id="@+id/txt_returndate"
+                            android:focusable="false"
+                            android:paddingLeft="10dp"/>
 
 
 
@@ -172,7 +189,8 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_note"/>
 
                 </LinearLayout>
 
@@ -187,7 +205,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Item"/>
+                    android:text="Add Item"
+                    android:id="@+id/btn_save_item"
+                    android:background="@color/colorAccent"
+                    android:textColor="#fff"
+                    android:clickable="true" />
 
             </LinearLayout>
 
